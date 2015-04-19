@@ -1,17 +1,36 @@
 
 /*** Коррекция стилей BS ***/
-dl code.descname { background-color: transparent; font-size: 120%; color: #333; }
-dl.class em.property { color: darkred; }
-dd { margin-left: 15px; }
-.viewcode-link { padding: 0px 5px; }
+
 blockquote { padding: 0 1em; margin: 1em 0; border-left: 2px solid darkred; color: indigo;}
 
 ul { list-style-type: square; }
 ul ul { margin-top: 7px; margin-left: 20px; padding: 0; }
 
+dl code {
+    padding: 0px;
+    font-size: 125%;
+    color: darkblue;
+    background-color: transparent;
+}
+dl.class em.property { color: darkred; }
+dl.class em, dl.class span,
+dl.function em, dl.function span { color: #555; }
+
+code.literal {
+    padding: 2px 4px;
+    font-size: 96%;
+    background-color: rgba(255, 255, 0, 0.25);
+    border-radius: 4px;
+}
+code.literal span { color: darkblue; }
+
+dd { margin-left: 20px; }
+
+.viewcode-back { float: right; }
+.viewcode-link { padding: 0px 5px; float: right; color: orangered !important;}
+
 /*** подсветка активного пункта navbar ***/
 .navbar .active { color: #fff; }
-
 
 
 /*** ссылки на параграф ***/
@@ -20,7 +39,7 @@ h1:hover > a.headerlink, h2:hover > a.headerlink, h3:hover > a.headerlink, h4:ho
 
 
 /*** автоматические полосы прокрутки для кода ***/
-div.highlight > pre { overflow-x: auto; }
+div.highlight > pre { overflow-wrap: inherit; }
 
 
 /*** Боковая панель ***/
