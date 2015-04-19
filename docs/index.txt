@@ -1,0 +1,25 @@
+.. _index:
+
+=====
+Обзор
+=====
+
+.. toctree::
+    :maxdepth: 2
+
+    sample
+
+
+.. toctree::
+    :maxdepth: 1
+
+    contents
+    glossary
+    about
+
+Индексированные страницы
+========================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
