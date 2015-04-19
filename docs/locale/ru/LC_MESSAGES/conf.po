@@ -16,16 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # project
-msgid "RosixDoc"
-msgstr "RosixDoc"
+msgid "RosixDocs"
+msgstr "RosixDocs"
 
 # author
 msgid "Grigoriy Kramarenko"
 msgstr "Григорий Крамаренко"
 
 # title
-msgid "RosixDoc Documentation"
-msgstr "Документация RosixDoc"
+msgid "Rosix Documentation"
+msgstr "Документация Rosix"
 
 # about
 msgid "Theme for generator Sphinx."

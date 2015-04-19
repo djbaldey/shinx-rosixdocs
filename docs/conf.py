@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# RosixDoc documentation build configuration file, created by
+# RosixDocs documentation build configuration file, created by
 # sphinx-quickstart on Thu Apr  9 00:42:25 2015.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -49,7 +49,7 @@ sys.path.insert(0, BASE_DIR)
 # Set up the Django settings/environment if load code
 #os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
 #from django.conf import settings
-from rosixdoc import get_version, get_docs_version
+from rosixdocs import get_version, get_docs_version
 
 # -- General configuration -----------------------------------------------------
 
@@ -77,11 +77,11 @@ source_suffix = '.txt'
 master_doc = 'index'
 
 # General information about the project.
-name = 'rosixdoc'
-project = _('RosixDoc')
+name = 'rosixdocs'
+project = _('RosixDocs')
 author = _('Grigoriy Kramarenko')
 copyright = '2015, %s' % author
-title = _('RosixDoc Documentation')
+title = _('Rosix Documentation')
 about = _('Theme for generator Sphinx.')
 
 # The version info for the project you're documenting, acts as replacement for
@@ -137,7 +137,7 @@ exclude_patterns = ['_build']
 pygments_style = 'default'
 
 # A list of ignored prefixes for module index sorting.
-modindex_common_prefix = ['rosixdoc.']
+modindex_common_prefix = ['rosixdocs.']
 
 
 # -- Options for HTML output ---------------------------------------------------
@@ -145,7 +145,7 @@ modindex_common_prefix = ['rosixdoc.']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #html_theme = 'default'
-html_theme = 'rosixdoc'
+html_theme = 'rosixdocs'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

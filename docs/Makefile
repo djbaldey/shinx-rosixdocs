@@ -2,7 +2,7 @@
 #
 
 # You can set these variables from the command line.
-PROJECT       ?= rosixdoc
+PROJECT       ?= rosixdocs
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 PAPER         ?=

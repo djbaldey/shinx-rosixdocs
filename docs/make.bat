@@ -2,7 +2,7 @@
 
 REM Command file for Sphinx documentation
 if "%PROJECT%" == "" (
-    set PROJECT=rosixdoc
+    set PROJECT=rosixdocs
 )
 if "%SPHINXBUILD%" == "" (
     set SPHINXBUILD=sphinx-build
