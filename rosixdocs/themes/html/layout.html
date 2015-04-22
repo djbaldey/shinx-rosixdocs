@@ -243,8 +243,11 @@
         {%- block content %}
         <div class="row">
 
-            <div id="content" class="col-xs-12 col-md-9">
-                <div class="text-center">{{ breadcrumbs() }}</div>
+            <div id="content" class="{%- block content_class %}col-xs-12 col-md-9{%- endblock %}">
+                <!-- START: block top_breadcrumbs -->
+                {%- block top_breadcrumbs %}<div class="text-center">{{ breadcrumbs() }}</div>{%- endblock %}
+                <!-- END: block top_breadcrumbs -->
+
                 <!-- START: block body -->{%- block body %}{%- endblock %}<!-- END: block body -->
             </div><!-- /.col-md-9 -->
 
@@ -254,9 +257,12 @@
             <!-- END: block sidebar -->
             </div><!-- /.col-md-3 -->
 
+            <!-- START: block bottom_breadcrumbs -->
+            {%- block bottom_breadcrumbs %}
             <div class="col-xs-12 col-md-9">
                 <div class="text-center">{{ breadcrumbs() }}</div>
             </div><!-- /.col-md-9 -->
+            {%- endblock %}<!-- END: block bottom_breadcrumbs -->
 
         </div><!-- /.row -->
         {%- endblock %}
