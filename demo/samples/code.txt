@@ -1,0 +1,55 @@
+.. _code:
+
+Код
+===
+
+Эта тема использует стили Bootstrap для ``кода в одну строку`` и
+::
+
+    кода
+        в
+    несколько
+        строк
+
+
+Подсветка синтаксиса
+--------------------
+
+``Python``
+~~~~~~~~~~
+
+.. code-block:: python
+
+    class A(object):
+        """ Class docs """
+
+        def hello():
+            """ Method docs """
+            return "Hello World" # comment
+
+``HTML``
+~~~~~~~~
+
+.. code-block:: html
+
+    <html>
+      <!-- comment -->
+      <body>Hello World</body>
+    </html>
+
+    
+    a = A()
+    print(a.hello())
+
+``JavaScript``
+~~~~~~~~~~~~~~
+
+.. code-block:: javascript
+
+    /*
+     * Comment.
+     */
+    function hello(): {
+      return "Hello World";
+    }
+

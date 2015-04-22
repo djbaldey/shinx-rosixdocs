@@ -27,16 +27,9 @@
 <!DOCTYPE html>
 {%- endblock %}
 
-{%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
-
-{%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
-
 {%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and (sidebars != []) %}
 
 {%- set url_root = pathto('', 1) %}
-
-{# XXX necessary? #}
-{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
 
 {%- if not embedded and docstitle %}
     {%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
@@ -48,10 +41,39 @@
     {%- include "navbar.html" %}
 {%- endmacro %}
 
+{%- macro breadcrumbs() %}
+<ol class="breadcrumb">
+
+    <li>
+    {%- if prev %}
+        <a href="{{ prev.link|e }}" title="{{ prev.title|e }}">{{ _('previous') }}</a>
+    {%- else %}
+        {{ _('previous') }}
+    {%- endif %}
+    </li>
+
+    <li>
+    {%- if parents %}
+        <a href="{{ parents.0.link|e }}" title="{{ parents.0.title|e }}" accesskey="U">{{ _('up') }}</a>
+    {%- else %}
+        {{ _('up') }}
+    {%- endif %}
+    </li>
+
+    <li>
+    {%- if next %}
+        <a href="{{ next.link|e }}" title="{{ next.title|e }}">{{ _('next') }}</a>
+    {%- else %}
+        {{ _('next') }}
+    {%- endif %}
+    </li>
+
+</ol>
+{%- endmacro %}
 
 {%- macro sidebar() %}
 {%- if render_sidebar %}
-<div class="sphinxsidebar hidden-xs hidden-sm">
+<div class="sphinxsidebar">
     <div class="sphinxsidebarwrapper">
     {%- block sidebarlogo %}
     {%- if logo %}
@@ -111,6 +133,8 @@
         // интеллектуальная прокрутка содержимого sidebar
         $(window).scroll(function() {
 
+            if (!$('#sidebar:visible').size()) return;
+            
             var sb = $('.sphinxsidebarwrapper'),
                 win = $(window),
                 sbh = sb.height(),
@@ -219,15 +243,20 @@
         {%- block content %}
         <div class="row">
 
-            <div id="content" class="col-md-9">
+            <div id="content" class="col-xs-12 col-md-9">
+                <div class="text-center">{{ breadcrumbs() }}</div>
                 <!-- START: block body -->{%- block body %}{%- endblock %}<!-- END: block body -->
             </div><!-- /.col-md-9 -->
 
-            <div id="sidebar" class="col-md-3">
+            <div id="sidebar" class="col-md-3 hidden-xs hidden-sm">
             <!-- START: block sidebar -->
             {%- block sidebar %}{{ sidebar() }}{%- endblock %}
             <!-- END: block sidebar -->
             </div><!-- /.col-md-3 -->
+
+            <div class="col-xs-12 col-md-9">
+                <div class="text-center">{{ breadcrumbs() }}</div>
+            </div><!-- /.col-md-9 -->
 
         </div><!-- /.row -->
         {%- endblock %}

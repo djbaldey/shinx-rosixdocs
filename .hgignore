@@ -1,4 +1,6 @@
 \.pyc$
 .*__pycache__.*$
-^docs/_build/.*$
-
+^demo/_build/.*$
+^build/.*$
+^dist/.*$
+^sphinx-rosix-theme.egg-info/.*$

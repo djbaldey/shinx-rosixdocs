@@ -3,29 +3,54 @@
 
 blockquote { padding: 0 1em; margin: 1em 0; border-left: 2px solid darkred; color: indigo;}
 
+.breadcrumb>li+li:before { content: "|\00a0"; }
+
 ul { list-style-type: square; }
 ul ul { margin-top: 7px; margin-left: 20px; padding: 0; }
+ul a { overflow-wrap: break-word; }
 
-dl code {
+code {
     padding: 0px;
-    font-size: 125%;
-    color: darkblue;
+    font-size: 100%;
+    font-family: 'monospace';
+    color: inherit;
     background-color: transparent;
 }
-dl.class em.property { color: darkred; }
-dl.class em, dl.class span,
-dl.function em, dl.function span,
-dl.attribute code { color: #555; }
+ul code { font-family: inherit; }
 
-code.literal {
+dl code {
+    font-size: 125%;
+    color: darkblue;
+}
+
+#content dl.class em.property { color: darkred; }
+#content dl.class em,
+#content dl.class span,
+#content dl.function em,
+#content dl.function span,
+#content dl.attribute code { color: #555; }
+
+#content code.literal {
     padding: 2px 4px;
     font-size: 96%;
     background-color: rgba(255, 255, 0, 0.25);
     border-radius: 4px;
 }
-code.literal span { color: darkblue; }
+#content code.literal span { color: darkblue; }
+#content h1 code.literal,
+#content h2 code.literal,
+#content h3 code.literal,
+#content h4 code.literal,
+#content h5 code.literal,
+#content h6 code.literal
+{
+    padding: 0px;
+    font-size: inherit;
+    background-color: inherit;
+}
 
-dd { margin-left: 20px; }
+
+#content dd { margin-left: 20px; }
 
 .viewcode-back { float: right; }
 .viewcode-link { padding: 0px 5px; float: right; color: orangered !important;}

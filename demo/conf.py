@@ -44,12 +44,8 @@ THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(THIS_DIR)
 
 sys.path.insert(0, BASE_DIR)
-#sys.path.insert(0, os.path.join(BASE_DIR, 'example'))
 
-# Set up the Django settings/environment if load code
-#os.environ['DJANGO_SETTINGS_MODULE'] = 'project.settings'
-#from django.conf import settings
-from rosixdocs import get_version, get_docs_version
+from rosixdocs import get_docs_version, get_version
 
 # -- General configuration -----------------------------------------------------
 
@@ -59,16 +55,18 @@ from rosixdocs import get_version, get_docs_version
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    #'sphinx.ext.autodoc',
-    #'sphinx.ext.intersphinx',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
 ]
+
+# Math
+mathjax_path = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+
 # Add any paths that contain templates here, relative to this directory.
 #templates_path = ['_templates']
 
 # The suffix(es) of source filenames.
-# You can specify multiple suffix as a list of string:
-# source_suffix = ['.rst', '.md']
 source_suffix = '.txt'
 
 # The encoding of source files.
@@ -156,7 +154,7 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'rosixdocs'
+html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -164,7 +162,15 @@ html_theme = 'rosixdocs'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ['_theme']
+#html_theme_path = []
+
+try:
+    from rosixdocs import get_themes_path
+    html_theme_path = [ get_themes_path() ]
+    html_theme = 'html'
+except:
+    pass
+
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -237,7 +243,7 @@ html_last_updated_fmt = '%B %d, %Y'
 # Sphinx supports the following languages:
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
-#html_search_language = 'en'
+html_search_language = language
 
 # A dictionary with options for the search language support, empty by default.
 # Now only 'ja' uses this config value
