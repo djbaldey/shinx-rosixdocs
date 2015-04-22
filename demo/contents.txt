@@ -11,3 +11,4 @@
     samples/code
     samples/admonitions
     samples/tables
+    samples/images

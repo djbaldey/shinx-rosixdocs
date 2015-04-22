@@ -1,0 +1,25 @@
+.. _images:
+
+===========
+Изображения
+===========
+
+256x192
+=======
+
+.. figure:: img/small.jpg
+
+512x384
+=======
+
+.. figure:: img/medium.jpg
+
+
+1024x768
+========
+
+.. figure:: img/large.jpg
+
+
+
+

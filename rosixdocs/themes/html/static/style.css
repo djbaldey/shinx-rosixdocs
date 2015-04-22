@@ -26,6 +26,8 @@ dl code {
 #content dl.class em.property { color: darkred; }
 #content dl.class em,
 #content dl.class span,
+#content dl.method em,
+#content dl.method span,
 #content dl.function em,
 #content dl.function span,
 #content dl.attribute code { color: #555; }
@@ -49,14 +51,22 @@ dl code {
     background-color: inherit;
 }
 
-
-#content dd { margin-left: 20px; }
+/* вложенные списки слишком далеко, поэтому выборочно */
+#content dl.class>dd,
+#content dl.function>dd,
+#content dl.method>dd,
+#content dl.attribute>dd
+{ margin-left: 20px; }
 
 .viewcode-back { float: right; }
 .viewcode-link { padding: 0px 5px; float: right; color: orangered !important;}
 
 /*** подсветка активного пункта navbar ***/
 .navbar .active { color: #fff; }
+
+
+/*** изображения ***/
+div.figure img { display: block; max-width: 100%; height: auto; }
 
 
 /*** ссылки на параграф ***/

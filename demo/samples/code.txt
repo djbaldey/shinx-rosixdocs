@@ -53,3 +53,37 @@
       return "Hello World";
     }
 
+
+Модули Python
+=============
+
+.. module:: rosixdocs.testmodule
+    :synopsis: Модуль тестовый.
+
+Классы
+------
+
+.. class:: AbstractClass(object)
+
+    Описание
+
+    .. attribute:: attr
+
+        Описание
+
+    .. attribute:: field
+
+        Описание
+
+    .. method:: test(s='test class')
+
+        Описание
+
+Функции
+-------
+
+.. function:: testfunc(s='test func')
+
+    Описание
+
+
