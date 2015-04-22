@@ -12,3 +12,8 @@
     samples/admonitions
     samples/tables
     samples/images
+
+.. toctree::
+    :maxdepth: 1
+
+    samples/large

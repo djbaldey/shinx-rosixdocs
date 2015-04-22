@@ -3,6 +3,8 @@
 
 blockquote { padding: 0 1em; margin: 1em 0; border-left: 2px solid darkred; color: indigo;}
 
+.modindextable th, .modindextable td { padding: 2px 2px 2px 0px;}
+
 .breadcrumb>li+li:before { content: "|\00a0"; }
 
 ul { list-style-type: square; }
