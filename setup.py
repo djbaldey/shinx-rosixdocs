@@ -1,22 +1,8 @@
 # -*- coding: utf-8 -*-
 #
-#   Copyright 2012-2015 Grigoriy Kramarenko <root@rosix.ru>
+# Copyright 2015 Grigoriy Kramarenko <root@rosix.ru>
 #
-#   This file is part of QuickAPI.
-#
-#   QuickAPI is free software: you can redistribute it and/or
-#   modify it under the terms of the GNU Affero General Public License
-#   as published by the Free Software Foundation, either version 3 of
-#   the License, or (at your option) any later version.
-#
-#   QuickAPI is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU Affero General Public License for more details.
-#
-#   You should have received a copy of the GNU Affero General Public
-#   License along with QuickAPI. If not, see
-#   <http://www.gnu.org/licenses/>.
+# This file is part of RosixDocs theme for Sphinx.
 #
 
 from setuptools import setup, find_packages
@@ -30,7 +16,7 @@ setup(
     author='Grigoriy Kramarenko',
     author_email='root@rosix.ru',
     url='https://bitbucket.org/djbaldey/rosixdocs',
-    license='GNU Affero General Public License v3 or later (AGPLv3+)',
+    license='MIT',
     platforms='any',
     zip_safe=False,
     packages=['rosixdocs'],
@@ -38,7 +24,7 @@ setup(
     install_requires=open('requirements.txt').read().splitlines(),
     classifiers=[
         'Development Status :: 3 - Alpha',
-        'License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)',
+        'License :: OSI Approved :: MIT License',
         'Environment :: Console',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',

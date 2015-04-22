@@ -8,20 +8,6 @@
 
     This file is part of RosixDocs theme for Sphinx.
 
-    This is free software: you can redistribute it and/or
-    modify it under the terms of the GNU Affero General Public License
-    as published by the Free Software Foundation, either version 3 of
-    the License, or (at your option) any later version.
-
-    This is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public
-    License along with package. If not, see
-    <http://www.gnu.org/licenses/>.
-
 #}
 {%- block doctype -%}
 <!DOCTYPE html>
@@ -74,7 +60,9 @@
 {%- macro sidebar() %}
 {%- if render_sidebar %}
 <div class="sphinxsidebar">
+
     <div class="sphinxsidebarwrapper">
+
     {%- block sidebarlogo %}
     {%- if logo %}
         <p class="logo">
@@ -108,69 +96,43 @@
         {%- include "searchbox.html" %}
         {%- endblock %}
     {%- endif %}
+
     </div>
+
 </div>
+
 {%- endif %}
 {%- endmacro %}
 
 
 {%- macro script() %}
     <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '{{ url_root }}',
-        VERSION:     '{{ release|e }}',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
-        HAS_SOURCE:  {{ has_source|lower }}
-      };
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '{{ url_root }}',
+            VERSION:     '{{ release|e }}',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
+            HAS_SOURCE:  {{ has_source|lower }}
+        };
     </script>
+
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
+
     <script type="text/javascript" src="{{ pathto('_static/bootstrap/js/bootstrap.min.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/scroll.js', 1) }}"></script>
 
-    <script type="text/javascript">
-        // интеллектуальная прокрутка содержимого sidebar
-        $(window).scroll(function() {
-
-            if (!$('#sidebar:visible').size()) return;
-            
-            var sb = $('.sphinxsidebarwrapper'),
-                win = $(window),
-                sbh = sb.height(),
-                offset = $('.sphinxsidebar').position()['top'],
-                wintop = win.scrollTop(),
-                winbot = wintop + win.innerHeight(),
-                curtop = sb.position()['top'],
-                curbot = curtop + sbh;
-
-            // sidebar помещается в окно?
-            if (sbh < win.innerHeight()) {
-                // да: простой случай - всегда держать вверху
-                sb.css('top', $u.min([$u.max([0, wintop - offset - 10]),
-                                        $(document).height() - sbh - 200]));
-            } else {
-                // нет: прокручиваем только если верхний/нижний край
-                // боковой панели на верхнем/нижнем краю окна
-                if (curtop > wintop && curbot > winbot) {
-                    sb.css('top', $u.max([wintop - offset - 10, 0]));
-                } else if (curtop < wintop && curbot < winbot) {
-                    sb.css('top', $u.min([winbot - sbh - offset - 20,
-                                          $(document).height() - sbh - 200]));
-                }
-            }
-
-        });
-    
-    </script>
 {%- endmacro %}
 
 {%- macro css() %}
+
     <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
     {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
     {%- endfor %}
+
 {%- endmacro %}
 
 <html lang="{{ language }}">
