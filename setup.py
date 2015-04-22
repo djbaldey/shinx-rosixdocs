@@ -11,7 +11,7 @@ import rosixdocs
 setup(
     name='rosixdocs',
     version=rosixdocs.__version__,
-    description='Theme Rosix to the documentation for the Sphinx.',
+    description='Sphinx theme of documentation from Rosix.',
     long_description=open('README').read(),
     author='Grigoriy Kramarenko',
     author_email='root@rosix.ru',

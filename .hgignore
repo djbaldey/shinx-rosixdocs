@@ -3,4 +3,4 @@
 ^demo/_build/.*$
 ^build/.*$
 ^dist/.*$
-^sphinx-rosix-theme.egg-info/.*$
+^rosixdocs.egg-info/.*$
