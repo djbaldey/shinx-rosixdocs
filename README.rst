@@ -5,6 +5,7 @@ About
 RosixDocs - it's theme for Sphinx from Rosix projects.
 
 .. image:: https://bytebucket.org/djbaldey/rosixdocs/raw/default/screen.png
+   :width: 100%
 
 
 =====
