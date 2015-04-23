@@ -7,11 +7,11 @@ RosixDocs - it's theme for Sphinx from Rosix projects.
 Screenshot
 ==========
 
-.. image:: https://bitbucket.org/djbaldey/rosixdocs/src/default/screen.png
+.. image:: https://bytebucket.org/djbaldey/rosixdocs/raw/default/screen.png
     :width: 100%
     :height: auto
 
-`Link <https://bitbucket.org/djbaldey/rosixdocs/src/default/screen.png>`_.
+`View <https://bitbucket.org/djbaldey/rosixdocs/src/default/screen.png>`_.
 
 =====
 Usage
