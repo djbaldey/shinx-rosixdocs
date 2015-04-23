@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 #
-#   Copyright 2015 Grigoriy Kramarenko <root@rosix.ru>
+# Copyright 2015 Grigoriy Kramarenko <root@rosix.ru>
 #
-#   This file is part of RosixDocs.
+# This file is part of RosixDocs theme for Sphinx.
 #
 import os
 
-VERSION = (0, 0, 1)
+VERSION = (0, 1, 0)
 
 def get_version(*args, **kwargs):
     return '%d.%d.%d' % VERSION

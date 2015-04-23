@@ -11,8 +11,8 @@ import rosixdocs
 setup(
     name='rosixdocs',
     version=rosixdocs.__version__,
-    description='Sphinx theme of documentation from Rosix.',
-    long_description=open('README').read(),
+    description='Theme for Sphinx from Rosix projects.',
+    long_description=open('README.rst').read(),
     author='Grigoriy Kramarenko',
     author_email='root@rosix.ru',
     url='https://bitbucket.org/djbaldey/rosixdocs',
