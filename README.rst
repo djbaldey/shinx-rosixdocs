@@ -4,10 +4,14 @@ About
 
 RosixDocs - it's theme for Sphinx from Rosix projects.
 
-.. figure:: screen.png
+Screenshot
+==========
+
+.. image:: https://bitbucket.org/djbaldey/rosixdocs/src/default/screen.png
     :width: 100%
     :height: auto
 
+`Link <https://bitbucket.org/djbaldey/rosixdocs/src/default/screen.png>`_.
 
 =====
 Usage
