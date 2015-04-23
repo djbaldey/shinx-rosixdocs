@@ -1,7 +1,9 @@
 RosixDocs it's theme for Sphinx.
 
-Usage::
-=======
+Usage
+=====
+
+.. code-block:: python
 
     # in your conf.py
 
