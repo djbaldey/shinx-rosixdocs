@@ -1,5 +1,15 @@
-RosixDocs it's theme for Sphinx.
+=====
+About
+=====
 
+RosixDocs - it's theme for Sphinx from Rosix projects.
+
+.. figure:: screen.png
+    :width: 100%
+    :height: auto
+
+
+=====
 Usage
 =====
 
