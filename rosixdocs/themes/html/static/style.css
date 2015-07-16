@@ -34,6 +34,8 @@ dl code {
 #content dl.function span,
 #content dl.attribute code { color: #555; }
 
+#content li { clear: both; }
+
 #content code.literal {
     padding: 2px 4px;
     font-size: 96%;
