@@ -1,5 +1,3 @@
-syntax:glob
-
 *.egg-info
 *.pot
 *.py[co]
@@ -8,4 +6,5 @@ MANIFEST
 dist/
 docs/_build/
 build/
-.git/
+.hg/
+.hgtags
