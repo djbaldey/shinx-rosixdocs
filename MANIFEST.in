@@ -1,6 +1,7 @@
 include README.rst
 include AUTHORS
 include COPYING
+include screen.png
 
 recursive-include rosixdocs *
 
